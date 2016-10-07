@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" type="text/css" href="css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/sweetalert.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Lobster" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>TAKE A HIKE!</title>
+</head>
+  <body>
+    <div class="container">
+        <div id="item-1">
+              <input id="input" placeholder="Search" data-bind="textInput: query, foreach: filteredItems, valueUpdate: 'keyup'" autocomplete="off" type="text">
+              <h1 id="title">Take a Hike<span class="exclaim">!</span><span class="wide-device">&nbsp;in a U.S. National Park!</span></h1>
+        </div>
+        <div id="item-2">
+            <div class="list">
+              <ul data-bind="foreach: filteredItems">
+                <li>
+                  <a id="select" href="#" data-bind="text: $data.name, click: $parent.markerSelect"></a>
+                </li>
+              </ul>
+            </div>
+          <div id="map-container">
+            <div id="map"></div>
+          </div>
+        </div>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/knockout.js"></script>
+  <script src="js/sweetalert.min.js"></script>
+  <script src="js/main.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE&callback=googleSuccess" onerror="googleError()">
+  </script>
+  </body>
+</html>
