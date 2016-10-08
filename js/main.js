@@ -7,15 +7,13 @@ function googleSuccess() {
 
     // Initialize Google Map.
     function initMap() {
-         // If document is wider than 480px, isDraggable = true, else isDraggable = false.
-        var isDraggable = $(document).width() > 540 ? true : false;
         map = new google.maps.Map(document.getElementById('map'), {
             // center: (not needed as I am using map.fitBounds(bounds) to center the map.)
             zoom: 0,
             disableDefaultUI: true,
             zoomControl: true,
             mapTypeId: google.maps.MapTypeId.TERRAIN,
-            draggable: isDraggable,
+            draggable: false,
             scrollwheel: false
         });
         console.log("initMap");
@@ -153,7 +151,7 @@ function googleSuccess() {
                     oWeather = '<div><p>Weather is not available at this time. Please try again later.</p></div>';
                 }, 2000);
                 // Sets up 'url' request string for weather info based on latitude and longitude of park
-                var data_url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + park.lat() + '&lon=' + park.lng() + '&units=imperial&APPID=YOUR_KEY_HERE';
+                var data_url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + park.lat() + '&lon=' + park.lng() + '&units=imperial&APPID=59e7425515b49d16b19c1a9484c32c71';
                 // OpenWeatherMap AJAX request
                 $.ajax({
                     url: data_url,

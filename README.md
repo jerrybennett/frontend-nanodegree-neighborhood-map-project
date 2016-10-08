@@ -8,8 +8,8 @@ I built a single-page application featuring a map of all of the national parks I
 ## To View
 Click this link [to view](http://www.jerrybennett.me/frontend-nanodegree-neighborhood-map-project/index.html)
 
-### Note to reviewer
-I have removed the API keys from my project in this repo. If you prefer you can download the code enter your own API keys and open the index.html page in your browser.
+## To View Locally
+If you prefer you can download the project files and open the index.html page in your browser.
 
 ## Resources Used
 
